@@ -16,21 +16,17 @@ namespace Portfolio.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Contact()
         {
-            return View();
-            
-        }
-
-        public IActionResult Test()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var contact = new ContactModel()
+            {
+                Email = "Sina@gmail.com",
+                PhoneNumber = "091234354",
+                WebSite = "www.github.com/SinaNazari"
+            };
+            return View(contact);
         }
     }
+
 }
+

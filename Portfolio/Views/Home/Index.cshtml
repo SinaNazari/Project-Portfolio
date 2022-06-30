@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "سایت شخصی سینا نظزی";
     //ViewData["KeyWords"] = "Sina,SINA,SIna";
 }
 
@@ -12,7 +12,38 @@
 <div class="text-center">
     <h1>Hello World</h1>
     <hr />
-    <h3 class="text-danger">
+    <h3>
         My Name is Sina Nazari I Am Programer I Control Your Life ...
     </h3>
 </div>
+
+
+@*
+<section id="one">
+    <header class="major">
+        <h2>
+            @ViewData["headingTitle"]
+        </h2>
+    </header>
+    <p>
+        @ViewBag.headingText
+    </p>
+</section>
+
+<section id="two">
+    <h2>نمونه کارهای اخیر</h2>
+    <div class="row">
+
+        @foreach (var portfolio in Model)
+        {
+            <article class="6u 12u$(xsmall) work-item" style="width: 33%;">
+                <a href="~/images/thumbs/@portfolio.Image" class="image fit thumb" alt="@portfolio.Title" title="@portfolio.Description">
+                    <img src="~/images/thumbs/@portfolio.Image" alt="@portfolio.Title" title="@portfolio.Description"/>
+                </a>
+                <h3>@portfolio.Title</h3>
+                <p>@portfolio.Description</p>
+            </article>
+        }
+
+    </div>
+</section>*@
