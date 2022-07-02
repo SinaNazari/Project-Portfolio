@@ -1,49 +1,39 @@
-﻿@{
+﻿@model List<PortfolioModel>
+@{
     ViewData["Title"] = "سایت شخصی سینا نظزی";
     //ViewData["KeyWords"] = "Sina,SINA,SIna";
 }
 
 @section SEO
-{
-<meta name="keywords" content="Home,Pages,first,HomePage" />
-<meta name="description" content="description My Portfolio" />
+    {
+    <meta name="keywords" content="Home,Pages,first,HomePage" />
+    <meta name="description" content="description My Portfolio" />
 }
 
-<div class="text-center">
-    <h1>Hello World</h1>
-    <hr />
-    <h3>
-        My Name is Sina Nazari I Am Programer I Control Your Life ...
-    </h3>
-</div>
+    <section id="one">
+        <header class="major">
+            <h2>
+                @ViewData["headingTitle"]
+            </h2>
+        </header>
+        <p>
+            @ViewData["headingText"]
+        </p>
+    </section>
 
 
-@*
-<section id="one">
-    <header class="major">
-        <h2>
-            @ViewData["headingTitle"]
-        </h2>
-    </header>
-    <p>
-        @ViewBag.headingText
-    </p>
-</section>
-
-<section id="two">
-    <h2>نمونه کارهای اخیر</h2>
-    <div class="row">
-
-        @foreach (var portfolio in Model)
+    <section id="two">
+        <h2>نمونه کارهای اخیر</h2>
+        <div class="row">
+            @foreach (var portfolioModel in Model)
         {
-            <article class="6u 12u$(xsmall) work-item" style="width: 33%;">
-                <a href="~/images/thumbs/@portfolio.Image" class="image fit thumb" alt="@portfolio.Title" title="@portfolio.Description">
-                    <img src="~/images/thumbs/@portfolio.Image" alt="@portfolio.Title" title="@portfolio.Description"/>
+            <article class="6u 12u$(small) work-item">
+                <a href="~/images/thumbs/@portfolioModel.Image" class="image fit thumb" alt="@portfolioModel.Title" title="@portfolioModel.Description">
+                    <img src="~/images/thumbs/@portfolioModel.Image" alt="@portfolioModel.Title" title="@portfolioModel.Description" />
                 </a>
-                <h3>@portfolio.Title</h3>
-                <p>@portfolio.Description</p>
+                <h3>@portfolioModel.Title</h3>
+                <p>@portfolioModel.Description</p>
             </article>
         }
-
     </div>
-</section>*@
+</section>
